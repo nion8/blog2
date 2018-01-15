@@ -1,0 +1,142 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="">
+
+    <title>Starter Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"> <!--Custom styles for this template -->
+    <style type="text/css">
+        body {
+            padding-top: 5rem;
+        }
+
+        .starter-template {
+            padding: 3rem 1.5rem;
+            text-align: center;
+        }
+    </style>
+</head>
+
+
+<body>
+<!-- /nav bar -->
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="{% url 'index' %}">Домой</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+            aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Мой блог <span class="sr-only">(current)</span></a>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </div>
+</nav>
+<!-- /end nav bar -->
+
+<div class="container">
+    <div class="starter-template">
+        <h1>{{ text }}</h1>
+        <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a
+            mostly barebones HTML document.</p>
+    </div>
+</div>
+<!-- /.container -->
+<div class="jumbotron">
+    <h1 class="display-3">Самый крутой блог сдесь!</h1>
+    <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to
+        featured content or information.</p>
+    <hr class="my-4">
+    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+    <p class="lead">
+        <a class="btn btn-primary btn-lg" href="#" role="button">Жми сюда</a>
+    </p>
+</div>
+<!--  -->
+
+<!-- Content here -->
+<div class="container">
+    {% block content %}
+
+    {% endblock %}
+
+</div>
+
+<!-- /.page-section -->
+<!-- /.page-section -->
+
+<!--footer-->
+<div class="page-footer fut ">
+    <footer class="footer-nav ">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-3 fut1">
+                    <h4>Pricing</h4>
+                    <ul>
+                        <li><a href="/pricing/">Vultr Cloud Compute (VC2)</a></li>
+                        <li><a href="/pricing/baremetal/">Bare Metal</a></li>
+                        <li><a href="/pricing/blockstorage/">Block Storage</a></li>
+                        <li><a href="/pricing/dedicatedcloud/">Dedicated Instances</a></li>
+                        <li><a href="/ddos/">DDoS Protection</a></li>
+                    </ul>
+                </div>
+                <div class="col-xs-3 fut1 ">
+                    <h4>Features</h4>
+                    <ul>
+                        <li><a href="/features/">Vultr Cloud Compute (VC2)</a></li>
+                        <li><a href="/features/baremetal/">Bare Metal</a></li>
+                        <li><a href="/features/blockstorage/">Block Storage</a></li>
+                        <li><a href="/features/dedicatedcloud/">Dedicated Cloud</a></li>
+
+                    </ul>
+                </div>
+                <div class="col-xs-3 fut1">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/faq/">FAQ</a></li>
+                        <li><a href="/api/">API</a></li>
+                        <li><a href="/docs/">Vultr Docs</a></li>
+
+                    </ul>
+                </div>
+                <div class="col-xs-3 fut1">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="/about/">About Us</a></li>
+                        <li><a href="/about/team/">Our Team</a></li>
+                        <li><a href="/news/">News</a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+    <script src="{% static 'js/jquery-3.2.1.min.js' %}" ></script>
+    <script src="{% static 'js/bootstrap.min.js' %}" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+</body>
+</html>
