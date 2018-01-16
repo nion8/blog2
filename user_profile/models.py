@@ -20,4 +20,3 @@ class User(AbstractBaseUser):
     #
     #  def __unicode__(self):
     #      return self.username
-
