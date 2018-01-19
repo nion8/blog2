@@ -1,15 +1,17 @@
 {% extends 'home.html' %}
 {% block content %}
     <div class="row clearfix">
+    <div class="col-md12 column">
+        <form action="post/"></form>
+    </div>
+
         <div class="cm-12 column">
             {% for post in posts %}
             <div class="well">
                 {{ post.text }}
             </div>
             {% endfor %}
-        <div>
 
-        </div>
 
         </div>
     </div>
