@@ -6,6 +6,7 @@ from user_profile.models import User
 from django import forms
 
 class Post(models.Model):
+    #Post madel
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     text = models.CharField(max_length=300)
     created_date = models.DateTimeField(auto_now_add=True)
@@ -18,4 +19,13 @@ class Post(models.Model):
 
     # email = models.EmailField()
     # name = models.CharField(max_length=128)
+
+class HashTag(models.Model):
+    #Hashtag model
+    name = models.CharField(max_length=123, unique=True)
+    post = models.ManyToManyField(Post)
+
+    def __str__(self):
+        return self.name[:48]
+
 
