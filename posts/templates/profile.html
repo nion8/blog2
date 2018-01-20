@@ -1,22 +1,25 @@
 {% extends 'home.html' %}
 {% block content %}
     <div class="row clearfix">
-    <div class="col-md12 column">
-        <form action="post/" method="post">
-            {% csrf_token %}
-            <div class="col-md-8 col-md-offset-2 fieldWrapper">
+        <div class="col-12 columns">
+            <form action="post/" method="post">
+                {% csrf_token %}
+
+                <input type="submit" value="Post">
+            </form>
+            <div class="col-cm-8 col-cm-offset-2 fieldWrapper">
                 {{ form.text.errors }}
                 {{ form.text }}
             </div>
-            <input type="submit" value="Post">
-        </form>
-    </div>
 
-        <div class="cm-12 column">
+        </div>
+
+
+        <div class="col-12 columns">
             {% for post in posts %}
-            <div class="well">
-                {{ post.text }}
-            </div>
+                <div class="well">
+                    {{ post.text }}
+                </div>
             {% endfor %}
 
 
