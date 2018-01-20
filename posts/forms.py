@@ -1,5 +1,5 @@
 from django import forms
-from .models import *
+# from .models import *
 
 
 #
@@ -9,4 +9,4 @@ from .models import *
 #         exclude = [""]
 
 class PostForm(forms.Form):
-    text = forms.CharField(widget=forms.Textarea(attrs={'rows: 2', 'cols: 80'}), max_length=300)
+    text = forms.CharField(widget=forms.Textarea(attrs={'rows': 2, 'cols': 80}), max_length=300)

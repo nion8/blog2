@@ -4,6 +4,10 @@
     <div class="col-md12 column">
         <form action="post/" method="post">
             {% csrf_token %}
+            <div class="col-md-8 col-md-offset-2 fieldWrapper">
+                {{ form.text.errors }}
+                {{ form.text }}
+            </div>
         </form>
     </div>
 
