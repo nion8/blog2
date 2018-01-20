@@ -17,7 +17,7 @@ from django.http import HttpResponseRedirect
 class Index(View):
 
     def get(self, request):
-        context = {'text': 'Привет Мир!!'}
+        context = {'text': 'Посты по Django!!'}
         return render(request, 'home.html', context)
 
 
