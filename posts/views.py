@@ -6,6 +6,7 @@ from django.views import View
 from .models import Post, HashTag
 from user_profile.models import User
 from posts.forms import PostForm
+from django.http import HttpResponseRedirect
 
 
 #
@@ -44,5 +45,7 @@ class PostPost(View):
             for word in words:
                 if word.startswith('#'):
                     hash_tag, created = HashTag.objects.get_or_create(name=word)
+                    hash_tag.post.add(post)
+        return HttpResponseRedirect('/user/'+usermane)
 
 
