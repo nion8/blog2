@@ -4,20 +4,18 @@
         <div class="col-12 columns">
             <form action="post/" method="post">
                 {% csrf_token %}
-
+                <div class="col-cm-8 col-cm-offset-2 fieldWrapper">
+                    {{ form.text.errors }}
+                    {{ form.text }}
+                </div>
                 <input type="submit" value="Post">
+
+
             </form>
-            <div class="col-cm-8 col-cm-offset-2 fieldWrapper">
-                {{ form.text.errors }}
-                {{ form.text }}
-            </div>
-
         </div>
-
-
         <div class="col-12 columns">
             {% for post in posts %}
-                <div class="well">
+                <div class="bl">
                     {{ post.text }}
                 </div>
             {% endfor %}

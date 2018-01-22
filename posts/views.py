@@ -30,7 +30,7 @@ class Profile(View):
         context = {
             'posts': posts,
             'user': user,
-            'form': form
+            'form': form,
 
         }
         return render(request, 'profile.html', context)
