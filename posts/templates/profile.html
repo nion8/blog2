@@ -17,6 +17,19 @@
             {% for post in posts %}
                 <div class="bl">
                     {{ post.text }}
+                <p></p>
+                <p>
+                    <i class="icon-user"></i> <a href="/user/{{ user.username }}">{{ user }}</a>
+                    | {{ post.created_date | date:"d/m/y" }}
+                    | <a href=""><i class="glyphicon glyphicon-comment"></i>Comments</a>
+                    | <a href=""><i class="glyphicon glyphicon-share-alt"></i>Shares</a>
+                    {% if post.hashtag_set.all|length > 0 %}
+                    | <i class="icon-tags"></i> Tags:
+                      {% for hashtag in post.hashtag_set.all %}
+                          <a href=""><span class="label label-info">{{ hashtag }}</span></a>
+                          {% endfor %}
+                          {% endif %}
+                </p>
                 </div>
             {% endfor %}
 
