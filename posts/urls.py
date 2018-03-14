@@ -11,6 +11,8 @@ urlpatterns = [
     # path('', views.index, name='index'),
     #     path('', views.blog, name='blog'),
     # path('', Profile.as_view()),
+        
+
     # re_path(r'^user/(\w+)/$', views.Profile, name='profile'),
     # url(r'^user/', Profile.as_view(), name='profile')
 ]
